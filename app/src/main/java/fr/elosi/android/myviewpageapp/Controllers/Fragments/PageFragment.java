@@ -20,12 +20,12 @@ import fr.elosi.android.myviewpageapp.R;
  */
 public class PageFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
+
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String KEY_POSITION = "position";
     private static final String KEY_COLOR = "color";
 
-    // TODO: Rename and change types of parameters
+
     private String position;
     private String color;
 
@@ -41,7 +41,6 @@ public class PageFragment extends Fragment {
      * @param color Parameter 2.
      * @return A new instance of fragment BlankFragment.
      */
-    // TODO: Rename and change types and number of parameters
     public static PageFragment newInstance(int position, int color) {
         PageFragment fragment = new PageFragment();
         Bundle args = new Bundle();
@@ -68,6 +67,7 @@ public class PageFragment extends Fragment {
         LinearLayout rootView = (LinearLayout) result.findViewById(R.id.fragment_page_rootview);
         TextView textView = (TextView) result.findViewById(R.id.fragment_page_title);
 
+        assert getArguments() != null;
         int position = getArguments().getInt(KEY_POSITION,-1);
         int color = getArguments().getInt(KEY_COLOR,-1);
 

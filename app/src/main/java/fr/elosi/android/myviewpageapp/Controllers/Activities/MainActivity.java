@@ -5,7 +5,9 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
 
-import fr.elosi.android.myviewpageapp.Controllers.Fragments.PageAdapter;
+import com.google.android.material.tabs.TabLayout;
+
+import fr.elosi.android.myviewpageapp.Controllers.Adapters.PageAdapter;
 import fr.elosi.android.myviewpageapp.R;
 
 public class MainActivity extends AppCompatActivity {
@@ -14,11 +16,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        this.configureViewpager();
+        this.configureViewpagerAndTabs();
     }
 
-    private void configureViewpager(){
+    private void configureViewpagerAndTabs(){
         ViewPager pager = findViewById(R.id.activity_main_viewpager);
-        pager.setAdapter(new PageAdapter(getSupportFragmentManager(),getResources().getIntArray(R.array.colorPagesViewPager)));
+        pager.setAdapter(new PageAdapter(getSupportFragmentManager()));
+
+        TabLayout tabs= findViewById(R.id.activity_main_tabs);
+        tabs.setupWithViewPager(pager);
+        tabs.setTabMode(TabLayout.MODE_FIXED);
     }
 }

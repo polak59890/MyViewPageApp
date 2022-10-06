@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">My ViewPage App de formation</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="page_number">page numéro </string>
+    <string name="fil_d_actualite">Fil d\'actualité</string>
+    <string name="page_de_parametre">page de paramètre</string>
+    <string name="profil_page">page de profil</string>
 </resources>
